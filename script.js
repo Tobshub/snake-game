@@ -9,7 +9,7 @@ const gameBoard = document.querySelector('.game-area');
 function main(currentTime){
 if(gameOver){
   if(confirm('You lost, Press ok to restart.')){
-    location.reload();
+    window.location.reload();
   };
   return;
 }
