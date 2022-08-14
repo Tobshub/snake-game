@@ -3,6 +3,7 @@ export const SNAKE_SPEED = 12;
 
 const snakeBody = [{x: 11, y: 11}]
 let newSegments = 0;
+let score = 0;
 
 
 export function update() {
@@ -30,6 +31,10 @@ export function draw(gameBoard) {
 export function expandSnake(amount){
   newSegments += amount;
 }
+
+// export function showScore(){
+
+// }
 
 export function onSnake(position, {ignoreHead = false} = {}){
   return snakeBody.some((segment,index) =>{

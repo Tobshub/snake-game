@@ -4,12 +4,12 @@ import { outsideGrid } from './grid.js';
 
 let lastRenderTime = 0;
 let gameOver = false;
-const gameBoard = document.querySelector('.game-area');
+const gameBoard = document.querySelector('.game-area'); 
 
 function main(currentTime){
 if(gameOver){
   if(confirm('You lost, Press ok to restart.')){
-    window.location.reload();
+    window.location.reload(); //restarts the game
   };
   return;
 }
@@ -31,6 +31,7 @@ function update() {
   updateSnake();
   updateFood();
   checkDeath();
+  // showScore();
 }
 
 function draw() {
